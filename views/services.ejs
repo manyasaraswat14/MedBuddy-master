@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!--Meta Data-->
+    <%- include('partial/title.ejs'); %> 
+
+    <% if (data.NODE_ENV == 'production') { %>
+      <!-- Production Stylesheets -->
+      <link rel="stylesheet" href="assets/production/css/services.min.css">
+
+    <% }else { %>
+      <!-- Development Stylesheets -->
+      <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/lib/css/fontawesome.min.css">
+      <link rel="stylesheet" href="assets/lib/css/responsive.css">
+      <link rel="stylesheet" href="assets/lib/css/select2.min.css">
+      <link rel="stylesheet" href="assets/lib/css/spacing.css">
+      <link rel="stylesheet" href="assets/lib/css/style.css">
+      <link rel="stylesheet" href="assets/lib/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="assets/lib/css/bootstrap-datepicker.min.css">
+      <link rel="stylesheet" href="assets/lib/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/header.css">
+
+    <% } %>
+
+  </head>
+
+  <body onLoad="typeWriter()">
+    <!--Header-->
+    <%- include('partial/header.ejs', {data: data }); %>
+
+    <!--Service-Area Start-->
+    <div class="service-page pt_60 pb_90">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/newborncare" class="image-effect">
+                <div class="services-photo" style="background-image: url(assets/images/newborn.JPEG)"></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/newborncare">Newborn Care</a></h3>
+<p>
+  At MedicoBuddy, we provide specialized newborn care services to ensure a healthy start to life. 
+  Our expert pediatricians and neonatal nurses are dedicated to monitoring and nurturing newborns 
+  with utmost attention. We offer round-the-clock care, early health assessments, immunizations, and 
+  support for breastfeeding mothers. Our goal is to provide a safe, warm, and supportive environment 
+  where every newborn receives the best possible medical care and attention.
+</p>
+<div class="button-bn">
+  <a href="/newborncare">Read More <i class="fa fa-chevron-circle-right"></i></a>
+</div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/view2" class="image-effect">
+                <div class="services-photo" style="background-image: url(assets/images/mothercare.JPEG)"></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/view2">Mother Care</a></h3>
+                <p>
+                  At MedicoBuddy, we prioritize the health and well-being of mothers at every stage — from pregnancy to postpartum 
+                  recovery. Our dedicated team of obstetricians and healthcare professionals offers personalized care,
+                   including regular check-ups, nutritional guidance, mental health support, and postnatal services. 
+                   We are committed to creating a supportive and nurturing environment to ensure every mother feels confident,
+                    cared for, and empowered throughout her journey to motherhood. </p>
+                <div class="button-bn">
+                  <a href="/view2">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/critical" class="image-effect">
+                <div class="services-photo" style="background-image: url(assets/images/criticaltreatement.JPEG)"></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/critical">Critical Treatment</a></h3>
+                <p>
+                  At MedicoBuddy, we offer advanced critical care services for patients facing life-threatening conditions. 
+                  Our specialized ICU units are equipped with state-of-the-art technology and operated by highly trained medical 
+                  professionals available 24/7. From emergency interventions to continuous monitoring and specialized treatments,
+                   we ensure that every patient receives immediate, precise, and compassionate care to maximize recovery chances
+                    during critical times </p>
+                <div class="button-bn">
+                  <a href="/critical">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/moderlab" class="image-effect">
+                <div class="services-photo" style="background-image: url(assets/images/lab.JPEG)"></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/moderlab">Modern Laboratory</a></h3>
+                <p>
+                  MedicoBuddy is equipped with a cutting-edge laboratory designed to deliver fast, accurate, and reliable 
+                  diagnostic results. Our lab uses the latest technology and automated systems to perform a wide range of tests,
+                   ensuring high standards of precision and efficiency. With our expert technicians and strict quality control, 
+                   we help doctors make timely and informed decisions for better patient care. </p>
+                <div class="button-bn">
+                  <a href="/moderlab">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/majortest" class="image-effect">
+                <div class="services-photo" style="background-image: url(assets/images/test.JPEG)"></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/majortest">All Major Tests</a></h3>
+                <p>
+                  At MedicoBuddy, we offer a comprehensive range of major medical tests under one roof.
+                   From blood tests, imaging scans, and pathology services to specialized diagnostics, 
+                   our advanced facilities ensure that patients receive complete and accurate health assessments.
+                    Our goal is to provide quick, convenient, and reliable testing to support early diagnosis and effective
+                     treatment. </p>
+                <div class="button-bn">
+                  <a href="/majortest">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/dental" class="image-effect">
+                <div class="services-photo" style="background-image: url(assets/images/dental.JPEG)"></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/dental">Dental Care</a></h3>
+                <p>
+                  MedicoBuddy provides exceptional dental care services aimed at maintaining and enhancing 
+                  your oral health. Our team of skilled dentists offers a full range of treatments, including
+                   routine check-ups, cleanings, fillings, root canals, cosmetic dentistry, and more.
+                    We use modern equipment and a patient-friendly approach to ensure a comfortable, 
+                    painless experience for every smile. </p>
+                <div class="button-bn">
+                  <a href="/dental">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Service-Area End-->
+
+    <!--Footer-->
+    <%- include('partial/footer.ejs'); %>
+    
+    <script>
+      var i = 0;
+      var txt = 'WELCOME TO MEDBUDDY';
+      var speed = 60;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("typeit").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+
+    <!-- JavaScript -->
+    <script defer src="assets/lib/js/jquery-3.4.1.min.js"></script>
+    <script defer src="assets/lib/js/popper.min.js"></script>
+    <script defer src="assets/lib/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/lib/js/all.min.js"></script>
+    <script defer src="assets/lib/js/select2.full.min.js"></script>
+    <script defer src="assets/js/about.js"></script>
+  </body>
+</html>

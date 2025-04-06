@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!--Meta Data-->
+    <%- include('partial/title.ejs'); %> 
+
+    <% if (data.NODE_ENV == 'production') { %>
+      <!-- Production Stylesheets -->
+      <link rel="stylesheet" href="assets/production/css/about.min.css">
+
+    <% }else { %>
+      <!-- Development Stylesheets -->
+      <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/lib/css/fontawesome.min.css">
+      <link rel="stylesheet" href="assets/lib/css/responsive.css">
+      <link rel="stylesheet" href="assets/lib/css/select2.min.css">
+      <link rel="stylesheet" href="assets/lib/css/spacing.css">
+      <link rel="stylesheet" href="assets/lib/css/style.css">
+      <link rel="stylesheet" href="assets/lib/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="assets/lib/css/bootstrap-datepicker.min.css">
+      <link rel="stylesheet" href="assets/lib/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/header.css">
+      
+    <% } %>
+  </head>
+
+  <body onLoad="typeWriter()">
+    <!--Header-->
+    <%- include('partial/header.ejs', {data: data }); %>
+
+    <!--FAQ Start-->
+    <div class="faq-area pt_60 pb_90">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="faq-group headstyle mt-30">
+              <div id="accordion">
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading1">
+                    <button class="faq-button " data-toggle="collapse" data-target="#collapse1" aria-expanded="true"
+                      aria-controls="collapse1"><i class="fa fa-caret-right"></i>Vim at natum graeco percipitur
+                      te?</button>
+                  </div>
+
+                  <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>MediCoBuddy is a smart Hospital Management System that helps hospitals and clinics 
+                        manage patients, doctors, appointments, billing, inventory, and medical records 
+                        efficiently through a single platform.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading2">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse2"
+                      aria-expanded="true" aria-controls="collapse2"><i class="fa fa-caret-right"></i>
+                      Who can use MediCoBuddy?</button>
+                  </div>
+
+                  <div id="collapse2" class="collapse " aria-labelledby="heading2" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>MediCoBuddy is designed for hospitals, clinics, nursing homes, and healthcare 
+                        centers. It can be used by doctors, hospital staff, administrative teams, and 
+                        management personnel.<br></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading3">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse3"
+                      aria-expanded="true" aria-controls="collapse3"><i class="fa fa-caret-right"></i>
+                      What are the key features of MediCoBuddy?
+                    </button>
+                  </div>
+
+                  <div id="collapse3" class="collapse " aria-labelledby="heading3" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>Some key features include patient registration, appointment scheduling, electronic medical records (EMR)
+                         management, billing and invoicing, pharmacy management, staff management, and real-time reporting.<br></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading4">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse4"
+                      aria-expanded="true" aria-controls="collapse4"><i class="fa fa-caret-right"></i>How does MediCoBuddy improve hospital management?
+                      </button>
+                  </div>
+
+                  <div id="collapse4" class="collapse " aria-labelledby="heading4" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>MediCoBuddy automates routine administrative tasks, reduces paperwork, minimizes errors, 
+                        and enhances coordination between different departments, leading to better patient care 
+                        and faster hospital operations.<br></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading5">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse5"
+                      aria-expanded="true" aria-controls="collapse5"><i class="fa fa-caret-right"></i>Stet malis
+                      Is patient data safe in MediCoBuddy?</button>
+                  </div>
+
+                  <div id="collapse5" class="collapse " aria-labelledby="heading5" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>Yes, MediCoBuddy follows standard security protocols to ensure patient data is encrypted, 
+                        securely stored, and only accessible to authorized users<br></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading6">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse6"
+                      aria-expanded="true" aria-controls="collapse6"><i class="fa fa-caret-right"></i>
+                      Can MediCoBuddy be customized for different hospitals?</button>
+                  </div>
+
+                  <div id="collapse6" class="collapse " aria-labelledby="heading6" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>Yes, MediCoBuddy can be customized according to the size, requirements, and workflow of
+                         individual hospitals and healthcare centers.<br></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--FAQ End-->
+
+    <!--Footer-->
+    <%- include('partial/footer.ejs'); %>
+    
+    <script>
+      var i = 0;
+      var txt = 'WELCOME TO MEDBUDDY';
+      var speed = 60;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("typeit").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+
+      <!-- JavaScript -->
+    <script defer src="assets/lib/js/jquery-3.4.1.min.js"></script>
+    <script defer src="assets/lib/js/popper.min.js"></script>
+    <script defer src="assets/lib/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/lib/js/all.min.js"></script>
+    <script defer src="assets/lib/js/select2.full.min.js"></script>
+    <script defer src="assets/js/about.js"></script>
+    
+  </body>
+</html>
