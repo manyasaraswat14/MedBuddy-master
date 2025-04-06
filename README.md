@@ -2,7 +2,8 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 ![MIT](https://img.shields.io/github/license/Aman-Codes/MedBuddy?color=blue)
 
-I have editied this project included various ejs files like dental and more 
+I have edited this project included various ejs files like dental and more 
+
 MedBuddy is a website that connects doctors, patients, and ambulance providers. Patients can select a date and doctor to consult, and the system will automatically generate an appointment time based on the doctor's schedule. Patients can also view their current and past appointments and book ambulance services. Doctors can accept or reject appointments, view all their current and past appointments, and upload detailed prescriptions for patients.
 
 
